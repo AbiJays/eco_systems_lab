@@ -16,9 +16,6 @@ class Bear:
         return len(self.stomach)
 
 # A bear should be able to take a fish from the river
-    def bear_take_fish_from_river(self, fish):
-        yummy_fish = River.lose_fish(self, fish)
+    def bear_take_fish_from_river(self, river):
+        yummy_fish = River.lose_fish(river)
         self.stomach.append(yummy_fish)
-
-
-# A river should lose a fish when a bear takes a fish

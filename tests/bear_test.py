@@ -2,6 +2,7 @@ import unittest
 from src.bear import Bear
 from src.fish import Fish
 from src.river import River
+from tests.river_test import TestRiver
 # do test part first in order to conceptualise what it is we are going to test. this is what we are going to do here. 
 
 class TestBear(unittest.TestCase):
@@ -27,6 +28,6 @@ class TestBear(unittest.TestCase):
         self.assertEqual(0, self.bear_1.food_count())
     
     def test_bear_take_fish_from_river(self):
-        self.bear_1.bear_take_fish_from_river(self.fish_3)
+        self.bear_1.bear_take_fish_from_river(self.river_1)
         self.assertEqual(1, self.bear_1.food_count())
-        # self.assertEqual(2, )
+        self.assertTrue(TestRiver.test_lose_fish)
